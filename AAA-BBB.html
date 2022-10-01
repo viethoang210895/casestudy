@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Case Study Module 1 </title>
+    <link rel="stylesheet" href="Case.css">
+</head>
+<body>
+<h1><img src="111111111111.png"  width="1000px" height="150px" alt=""></h1>
+<span><b>THẾ GIỚI DI ĐỘNG CỬA HÀNG UY TÍN HÀNG ĐẦU VIỆT NAM</b></span>
+<div id="display"></div>
+<script>
+    let products=["Sony Xperia", "Iphone 14", "Samsung Galaxy","Apple Watch","Xiao Mi","Asus","Dell","Lenovo"];
+    function displayAllProduct(){
+        let table="<table>";
+        table+="<tr>"
+        table+="<td><b>Tên Điện Thoại</b></td>";
+        table+="<td><b>Đơn Vị </b></td>";
+        table+="<td><b>Số Lượng </b></td>";
+        table+="<td><b>Đơn Giá</b></td>";
+        table+="<td><b>Tình Trạng Máy</b></td>"
+        table+="<td colspan='2'; style='color:; text-align: left' ><b>Số Lượng Mặt Hàng : "+products.length+ "</b></td>";
+        table += "</tr>"
+        for(i=0;i<products.length;i++){
+            table+="<tr>";
+            table+="<td><b>"+products[i]+"</b></td>";
+            table+="<td><b>Chiếc</b></td>";
+            table+="<td><b>1</b></td>";
+            table+="<td><b>2"+i+ ".000.000 VND</b></td>";
+            table+="<td><b>Mới 100%</b></td>";
+            table+="<td> <button onclick='DeleteProduct("+i+")'><b>Thêm Vào Giỏ</b></button></td>";
+            table += "</tr>"
+
+        }table+="</table>"
+        document.getElementById("display").innerHTML=table;
+    }
+
+    // function creatProduct(){
+    //     let Newproduct= document.getElementById("input").value;
+    //     products.push(Newproduct)
+    //     document.getElementById("input").value = ""
+    //     displayAllProduct()
+    // }
+    function DeleteProduct(i){
+        if(confirm("BẠN  MUỐN THÊM HÀNG VÀO GIỎ CỦA  MÌNH ?")){
+            products.splice(i,1);
+            displayAllProduct()
+        }
+    }
+    // function Touch(){
+    //     alert("Đã Thêm Vào Giỏ Hàng ^_^")
+    // }
+    displayAllProduct()
+
+</script>
+<button style="height: 50px; width: 200px"><a href="a.html">BACK</a></button>
+</body>
+</html>

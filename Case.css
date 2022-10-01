@@ -1,0 +1,24 @@
+table{
+    color: brown;
+    width: 800px;
+    height: 600px;
+    border-radius: 1px;
+    /*margin: auto;*/
+}
+body{
+    background-image: url("background-trang.jpg");
+    width: 2300px;
+    height: 3600px;
+}
+button{
+    background-color: #f6e703;
+    border-radius: 4px;
+    border: 0px;
+    width: 150px;
+    height: 30px;
+    color: #830707;
+
+}
+span{
+    color: blue;
+}
